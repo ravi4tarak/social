@@ -1,0 +1,221 @@
+@import "../../style.scss";
+
+.rightbar{
+
+    @include themify($themes)
+    {
+
+    flex:3.8;
+    position:sticky;
+    top:72.4px;
+    height: calc(100vh - 72.4px);
+    overflow: scroll;
+    background-color: themed("bgSoft");
+    color: themed("textColor");
+
+    @include mobile{
+      display: none;
+     }
+
+    @include tablet{
+        display: none;
+    }
+
+    &::-webkit-scrollbar{
+      display: none;
+    }
+
+    .container{
+           
+         
+         .section1{
+            -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+            -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+            box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+            gap:15px;
+            //border: 1px solid grey;
+            background-color: themed("bg");
+            span{
+               
+                color:grey;
+               
+            }
+              .element{
+                 display: flex;
+                 justify-content: space-between;
+                 
+                 
+              }
+
+
+            .user{
+                display: flex;
+                font-display: row;
+                align-items: center;
+                gap:7px;
+                font-weight: 400;
+              img{
+                  width:40px;
+                  height:40px;
+                  border-radius: 50%;
+                  object-fit: cover;
+                }
+
+                p{
+                    color: themed("textColorSoft");
+                }
+                span{
+                    font-weight: 500;
+                    color: themed("textColor");  
+                }
+            }
+
+            .suggestion{
+                
+                display: flex;
+                flex-direction: row;
+                gap:10px;
+                align-items: center;
+
+                .button1{
+                    height:30px;
+                    border-radius: 3px;
+                    background-color: blue;
+                    border: none;
+                    color: white;
+                    cursor: pointer;
+                }
+                .button2{
+                    height:30px;
+                    border-radius: 3px;
+                    background-color: red;
+                    border: none;
+                    color: white;
+                    cursor: pointer;
+                }
+                
+            }
+         }
+
+         .section2{
+ 
+            -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+            -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+            box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+            gap:4px;
+            //border: 1px solid grey;
+            background-color: themed("bg");
+            span{
+               
+                color:grey;  
+            }
+              .element{
+                 display: flex;
+                 justify-content: space-between;
+                 
+  
+              }
+
+
+            .user{
+                display: flex;
+                font-display: row;
+                align-items: center;
+                gap:7px;
+                font-weight: 400;
+                
+              img{
+                  width:40px;
+                  height:40px;
+                  border-radius: 50%;
+                 object-fit: cover;
+                }
+                p{
+                    color:themed("textColorSoft");
+                }
+                span{
+                    font-weight: 500;
+                    color: themed("textColor");
+                    
+                }
+            }
+
+            .suggestion{
+                
+                display: flex;
+                flex-direction: row;
+                gap:10px;
+                align-items: center;
+                
+            }
+         }
+
+         .section3{
+
+            -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+            -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+            box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+            gap:15px;
+            background-color: themed("bg");
+
+            span{
+               
+                color:grey;
+               
+            }
+              .element{
+                 display: flex;
+                 justify-content: space-between;
+                  
+              }
+
+
+            .user{
+                display: flex;
+                font-display: row;
+                align-items: center;
+                gap:7px;
+                font-weight: 400;
+                position: relative;
+              img{
+                  width:40px;
+                  height:40px;
+                  border-radius: 50%;
+                 object-fit: cover;
+                }
+
+                .online{
+                    width:12px;
+                    height:12px;
+                    border-radius: 50%;
+                    background-color: limegreen;
+                    position: absolute;
+                    top:0;
+                    left: 30px;
+                }
+                span{
+                    font-weight: 500;
+                    color: themed("textColor");
+                    
+                }
+            }
+
+        
+         }
+
+         
+    }
+}
+}

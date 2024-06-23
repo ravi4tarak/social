@@ -1,0 +1,111 @@
+@import "../../style.scss";
+
+.leftbar{
+    
+@include themify($themes)
+{
+   flex:2;
+   position:sticky;
+   top:72.4px;
+   height: calc(100vh - 72.4px);
+   overflow: scroll;
+   background-color: themed("bg");
+   color: themed("textColor");
+
+   @include mobile{
+    display: none;
+   }
+   &::-webkit-scrollbar{
+     display: none;
+   }
+    .container{
+        width:300px;
+        //border:0.5px solid grey;
+
+        hr{
+            height:0.5px;
+            background-color: themed("border");
+            border: none;
+        }
+        .section1{
+            
+            display: flex;
+            flex-direction: column;
+            padding:20px;
+            gap:20px;
+        
+           
+            .user, .friends, .marketplace, .groups, .watch, .memories{
+                display: flex;
+                font-display: row;
+                align-items: center;
+                gap:7px;
+                font-weight: 400;
+              img{
+                  width:30px;
+                  height:30px;
+                  border-radius: 50%;
+                 object-fit: cover;
+              }
+              span{
+                 font-weight: 500;
+              }
+          }
+        }
+
+        .section2{
+            
+            display: flex;
+            flex-direction: column;
+            padding:20px;
+            gap:20px;
+           
+
+            .events, .gaming, .gallery, .videos, .messages{
+                display: flex;
+                font-display: row;
+                align-items: center;
+                gap:7px;
+                font-weight: 400;
+              img{
+                  width:30px;
+                  height:30px;
+                  border-radius: 50%;
+                 object-fit: cover;
+              }
+              span{
+                font-weight: 500;
+             }
+            }
+
+        }
+
+        .section3{
+
+           display: flex;
+            flex-direction: column;
+            padding:20px;
+            gap:20px;
+            border-bottom: 1px solid grey;
+            
+            .fundraiser, .tutorials, .courses{
+                display: flex;
+                font-display: row;
+                align-items: center;
+                gap:7px;
+                font-weight: 400;
+              img{
+                  width:30px;
+                  height:30px;
+                  border-radius: 50%;
+                 object-fit: cover;
+              }
+              span{
+                font-weight: 500;
+             }
+            }
+
+        }
+    }
+}
+}
